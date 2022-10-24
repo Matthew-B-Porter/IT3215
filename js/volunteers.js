@@ -4,11 +4,18 @@ var volunteerArray = [];
 
 var displayVolunteers = function () {   
     // display the volunteers in the text area
-    $("volunteerList").value = volunteerArray.join("\n");
+ // $("volunteerList").value = volunteerArray.join("\n");
 
 	// comment out the line above change this to a loop instead to loop through the array.
 	
-	
+	var temp = "";
+    var a = 1;
+	for(let i = 0; i < volunteerArray.length; i++){
+        temp += a + ". " + volunteerArray[i] + "\n";
+        a++;
+    }
+	$("volunteerList").value = temp;
+
 };
 
 var addVolunteer = function () {
@@ -29,10 +36,16 @@ var addVolunteer = function () {
 
 
 var deleteVolunteer = function () {
-    // get the data from the form (hint: use the same format as from the add).
+    //loop to start at the top of the array and compare one by one to delete the compared name
+    var temp = 1;
+    var compare = $("first_name").value + " " + $("last_name").value;
+   for(let j = 0; j < volunteerArray.length; j++){
+       if(compare == volunteerArray[j]){
+           volunteerArray.splice(j, 1);
+       }
+       temp++;
+   }
 
-    // remove the string from the array (hint, loop through the entire list, compare the string with the item in the array.
-	
    
 	 
     // display the volunteers and clear the add form
