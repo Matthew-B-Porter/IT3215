@@ -16,7 +16,7 @@ var displayVolunteers = function () {
     }
 	$("volunteerList").value = temp;
     
-    console.log(temp);
+    console.log();
 
 };
 
@@ -49,7 +49,7 @@ var deleteVolunteer = function () {
        temp++;
    }
 
-   console.log(compare);
+   console.log(volunteerArray);
 	 
     // display the volunteers and clear the add form
     displayVolunteers();
