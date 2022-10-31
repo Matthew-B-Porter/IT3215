@@ -15,6 +15,8 @@ var displayVolunteers = function () {
         a++;
     }
 	$("volunteerList").value = temp;
+    
+    console.log();
 
 };
 
@@ -42,11 +44,12 @@ var deleteVolunteer = function () {
    for(let j = 0; j < volunteerArray.length; j++){
        if(compare == volunteerArray[j]){
            volunteerArray.splice(j, 1);
+           compare = volunteerArray.splice(j,1);
        }
        temp++;
    }
 
-   
+   console.log(volunteerArray);
 	 
     // display the volunteers and clear the add form
     displayVolunteers();
