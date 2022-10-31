@@ -11,3 +11,5 @@ function onPageLoad(){
     img3.src = "images/silhouette.jpg";
     img4.src = "images/event.jpg";
 }
+
+console.log(onPageLoad);

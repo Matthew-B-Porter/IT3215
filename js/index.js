@@ -14,3 +14,5 @@ function rotate() {
     
     setTimeout("rotate()", 3 * 1000);
 }
+
+console.log(images);
