@@ -5,6 +5,7 @@
     <title>Invitation Page</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <script type="text/javascript" src="js/validation.js"></script>
+    <script type="test/javascript" src="js/registration.js"></script>
 </head>
 
 <body>
@@ -31,15 +32,14 @@
     <section id="pageForm">
     <!-- Action has the file that will laod after successful validation -->
     <!-- When user clicks on submit button, onsubmit get triggered if it return false then action wont triggered. -->
-    <form name="regform" action="confirmation.php" onsubmit="return validate()" 
-method="POST">
+    <form id="validateForm" name="regform" action="confirm.html" onsubmit="return validate(validation)">
         
      <label for="userName">Username:</label>
-     <input type="text" name="userName" placeholder="Enter your Username" />
+     <input id="userName" type="text" name="userName" placeholder="Enter your Username" />
      <span id="erroruserName"></span><br>
         
     <label for="Password">Password:</label>
-    <input type="password" name="password" placeholder="Enter your Password" />
+    <input id="password" type="password" name="password" placeholder="Enter your Password" />
     <span id="errorpassword"></span><br>
         
     <label for="passwordVerify">Verify your Password:</label>
@@ -47,30 +47,32 @@ method="POST">
     <span id="errorpasswordVerify"></span><br>
         
     <label for="firstName">First Name:</label>
-    <input type="text" name="firstName" placeholder="Enter your First Name" />
+    <input id="firstName" type="text" name="firstName" placeholder="Enter your First Name" />
     <span id="errorfirstName"></span><br>
         
     <label for="hostName">Last Name:</label>
-    <input type="text" name="lastName" placeholder="Enter your Last Name" />
+    <input id="lastName" type="text" name="lastName" placeholder="Enter your Last Name" />
     <span id="errorlastName"></span><br>
         
-    <label for="email">Email:</label>  <input type="text" name="email" placeholder="Enter your Email Address" />
+    <label for="email">Email:</label>  
+    <input id="email" type="text" name="email" placeholder="Enter your Email Address" />
     <span id="erroremail"></span><br>
  
-        <label for="phoneNumber">Phone Number</label>
-    <input type="text" name="phoneNumber" placeholder="Enter your Phone Number" />
+    <label for="phoneNumber">Phone Number</label>
+    <input id="phoneNumber" type="text" name="phoneNumber" placeholder="Enter your Phone Number" />
     <span id="errorphoneNumber"></span><br>
         
-    <label for="signUpNewsletter">Sign up for newsletter:</label>
+    <label id="signUpNewsletter" for="signUpNewsletter">Sign up for newsletter:</label>
     <input type="radio" name="signUpNewsletter" value="Yes" checked> Yes
     <input type="radio" name="signUpNewsletter" value="No"> No
     <span id="errorsignUpNewsletter"></span><br>
  <!-- Submit button -->
         
-    <input type="submit" value="Next step" >
+    <input type="submit" value="Submit" onclick="setCookie()">
     </form>
     </section>
     <footer>This events site is for IT-FP3215 tasks.
     </footer>
 </body>
-</html> 
+    
+</html>
